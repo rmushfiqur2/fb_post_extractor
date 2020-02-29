@@ -1,0 +1,68 @@
+{
+
+    "manifest_version": 2,
+    "name": "Facebook-Newsfeed-Eraser",
+    "version": "1.0",
+
+    "permissions": [
+        "storage"
+    ],
+  
+    "description": "Erase facebook newsfeed content",
+  
+    "icons": {
+      "48": "icons/icon.svg",
+      "96": "icons/icon.svg"
+    },
+      "content_scripts": [
+        {
+            "matches": [
+                "http://www.facebook.com/*",
+                "https://www.facebook.com/*",
+                "http://web.facebook.com/*",
+                "https://web.facebook.com/*"
+                //"https://mbasic.facebook.com/*"
+            ],
+            "js": [
+                "fb.js"
+            ],
+            "css": [
+                "fb.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "http://www.facebook.com/*",
+                "https://www.facebook.com/*",
+                "http://web.facebook.com/*",
+                "https://web.facebook.com/*"
+                //"https://mbasic.facebook.com/*"
+            ],
+            "js": [
+                "fb.js"
+            ],
+            "css": [
+                "fb.css"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "http://www.facebook.com/*",
+                "https://www.facebook.com/*",
+                "http://web.facebook.com/*",
+                "https://web.facebook.com/*",
+                "https://mbasic.facebook.com/*"
+            ],
+            "js": [
+                "fb.js"
+            ],
+            "css": [
+                "fb.css"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+  
+  }
